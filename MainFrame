@@ -1,0 +1,38 @@
+import javax.swing.*;
+
+public class MainFrame extends JFrame{
+
+
+
+    public static Allinfo allinfo;
+    public static Menu menu;
+
+    //    public static Psychotest psychotest;
+
+
+    public MainFrame(){
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(400,700);
+        setTitle("Recruitment Office");
+        setLayout(null);
+
+        menu = new Menu();
+        menu.setLocation(0,0);
+        add(menu);
+
+
+//        psychotest = new Psychotest();
+//        psychotest.setLocation(0,0);
+//        psychotest.setVisible(false);
+//        add(psychotest);
+
+
+
+        allinfo = new Allinfo();
+        allinfo.setLocation(0,0);
+        allinfo.setVisible(false);
+        add(allinfo);
+
+        repaint();
+    }
+}
