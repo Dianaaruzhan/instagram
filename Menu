@@ -1,0 +1,58 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+
+public class Menu extends JPanel {
+
+    private JLabel welcomeLabel;
+    private JButton profileButton;
+    private JButton resultButton;
+    private JButton exitButton;
+
+    public Menu() {
+        setSize(400, 700);
+        setLayout(null);
+
+        Font f = new Font(Font.DIALOG,Font.BOLD,35);
+        this.setBackground(Color.gray);
+        Font f2 = new Font(Font.DIALOG,Font.CENTER_BASELINE,15);
+
+        welcomeLabel = new JLabel("WELCOME");
+        welcomeLabel.setBounds(95,50,400,250);
+        welcomeLabel.setFont(f);
+        add(welcomeLabel);
+
+        profileButton = new JButton("Profile");
+        profileButton.setBounds(100, 300, 170, 50);
+        profileButton.setBackground(Color.lightGray);
+        profileButton.setFont(f2);
+        profileButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Main.frame.menu.setVisible(false);
+            }
+        });
+        add(profileButton);
+
+        resultButton = new JButton("Result");
+        resultButton.setBounds(100, 400, 170, 50);
+        resultButton.setBackground(Color.lightGray);
+        resultButton.setFont(f2);
+        resultButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            }
+        });
+        add(resultButton);
+
+        exitButton = new JButton("Exit");
+        exitButton.setBounds(100, 500, 170, 50);
+        exitButton.setBackground(Color.lightGray);
+        exitButton.setFont(f2);
+        exitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+        add(exitButton);
+    }
+}
